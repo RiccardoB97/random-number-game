@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Game</title>
+    <!-- main CSS file -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="user_input">
+                <label for="userNumber">Insert a number between 1 and 100</label>
+                <input type="text" v-model="userNumber">
+            </div>
+            <div class="squares_wrapper">
+                <div class="square" v-for='square in squares' :class="square.color ? 'green' : ''">
+    
+                </div>
+            </div>
+            <div class="play_button">
+                <button @click='startsGame(); resetBoard()'>Click to play</button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- link to Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- main JS file -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
